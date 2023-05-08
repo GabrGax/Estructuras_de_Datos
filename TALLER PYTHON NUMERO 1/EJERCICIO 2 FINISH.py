@@ -79,3 +79,7 @@ for i in range(1,6499):
           print("2.--------------------------------------------------------------------------------")
           print("CODIGO",Estudiantes[i,0] , "  EL ESTUDIANTE CONDICIONAL ", nombres[indice1], "  DE LA CARRERA ",carreras[indice2], "  TIENE PROMEDIO POND. MENOR O IGUAL A 3 Y CUYO PROMEDIO ES ", Estudiantes[i,2] ," Y ESTA DESDE EL ANHO ",Estudiantes[i,4] )
           print("---------------------------------------------------------------------------------------")
+
+
+
+print("GABRIEL DAVID CASTILLO RODRIGUEZ --- 2220055")

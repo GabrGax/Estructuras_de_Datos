@@ -17,3 +17,7 @@ representantes = np.argsort(arreglo)[::-1]
 
 for i in range(30):
     print("El representante numero ", representantes[i], "obtuvo ", arreglo[representantes[i]] , "votos ")
+
+
+
+print("GABRIEL DAVID CASTILLO RODRIGUEZ --- 2220055")
