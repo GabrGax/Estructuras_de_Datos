@@ -285,11 +285,12 @@ class ListaEnlazada:
                 # Nodotemp.imprimir_siguiente()
                 Nodotemp = Nodotemp.siguiente
                 print("COMPARA " + str(Nodotemp.pos))
-                if Nodotemp.valor == num:
+                if int(Nodotemp.valor) ==int(num):
                     print("POS ENCO " + str(Nodotemp.pos))
                     contador = contador + 1
                 else:
                     print(str(Nodotemp.valor) + " ES DISTINTO DE " + str(num))
+                    
 
         else:
             if self.cabeza.valor == num:
@@ -388,7 +389,7 @@ while True:
 
     if choice == "1":
         nume = input("Ingresa el número: ")
-        arreglo_objetos[i].cambiar_valor(nume)
+        arreglo_objetos[i].cambiar_valor(int(nume))
         Lista.agregar_Nodo_Final(arreglo_objetos[i])
         Lista.ciclo_sigue()
         pass
