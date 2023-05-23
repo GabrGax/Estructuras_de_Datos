@@ -189,11 +189,11 @@ class ListaEnlazada:
             if Nodotemp.siguiente == "NULL":
                 res = i + 1
                 print("Hay en total ", res, " elementos en la lista ")
-                time.sleep(5)
+                time.sleep(1)
 
         else:
             print(" Hay un único elemento en la lista ")
-            time.sleep(5)
+            time.sleep(1)
 
     def eliminar_ultimo(self):
         # print("------------IMPRESION DE VALORES----------------");
