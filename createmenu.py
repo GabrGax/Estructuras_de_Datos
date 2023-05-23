@@ -264,6 +264,40 @@ class ListaEnlazada:
                 print("ERROR FATAL!")
         self.indexar()
 
+    def contarnum(self, num):
+        # print("------------IMPRESION DE VALORES----------------");
+        self.indexar()
+        contador = 0
+        if self.cabeza.siguiente != "NULL":
+            # print(self.cabeza.valor)
+            if self.cabeza.valor == num:
+                contador = contador + 1
+
+            Nodotemp = self.cabeza.siguiente
+            # print(Nodotemp.valor)
+            # Nodotemp.pos = 1
+            if Nodotemp.valor == num:
+                print("POS ENCO " + Nodotemp.pos)
+                contador = contador + 1
+            while Nodotemp.siguiente != "NULL":
+                print("*/iTer**")
+
+                # Nodotemp.imprimir_siguiente()
+                Nodotemp = Nodotemp.siguiente
+                print("COMPARA " + str(Nodotemp.pos))
+                if Nodotemp.valor == num:
+                    print("POS ENCO " + str(Nodotemp.pos))
+                    contador = contador + 1
+                else:
+                    print(str(Nodotemp.valor) + " ES DISTINTO DE " + str(num))
+
+        else:
+            if self.cabeza.valor == num:
+                contador = contador + 1
+        print("El numero " + str(num) + "apareció " + str(contador) + " VECES ")
+        time.sleep(2)
+        # print(self.cabeza.valor)
+
 
 ####APARTADO DE PRUEBA DEL CODIGO---------------------------------------
 #
@@ -379,7 +413,8 @@ while True:
         Lista.ciclo_sigue()
         pass
     elif choice == "6":
-        # Code for option 6
+        pose = int(input("Ingresa EL NUMERO  "))
+        Lista.contarnum(pose)
         pass
     elif choice == "7":
         # Code for option 7
