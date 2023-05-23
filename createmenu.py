@@ -1,11 +1,7 @@
 # ----------------------------------------------principal
 import time
-
-
 def esperar(tiempo):
     time.sleep(tiempo)
-
-
 # Llamar a la función y esperar 5 segundos
 
 
@@ -31,12 +27,12 @@ class Nodo:
     # Metodo IMPRIMIR el siguiente
     def imprimir_siguiente(self):
         if self.siguiente == "NULL":
-            print("NULL")
+            print("----->  NULL   ||FIN||")
         else:
             print(self.siguiente.valor, end=" ")
-            print(" POSICION [", end=" ")
+            print("\033[45m" +" POSICION [", end=" ")
             print(self.siguiente.pos, end=" ")
-            print(" ] ")
+            print(" ] "+ "\033[0m")
 
 
 class ListaEnlazada:
@@ -52,31 +48,31 @@ class ListaEnlazada:
         )
         if self.cabeza.siguiente != "NULL":
             print(self.cabeza.valor, end=" ")
-            print(" POSICION [", end=" ")
+            print("\033[45m" + " POSICION [", end=" ")
             print(self.cabeza.pos, end=" ")
-            print(" ] ")
+            print(" ] "+ "\033[0m")
 
             Nodotemp = self.cabeza.siguiente
             print(Nodotemp.valor, end=" ")
-            print(" POSICION [", end=" ")
+            print("\033[45m"+" POSICION [", end=" ")
             print(Nodotemp.pos, end=" ")
-            print(" ] ")
+            print(" ] "+ "\033[0m")
 
             while Nodotemp.siguiente != "NULL":
-                print("*/iTer**")
+                print("------->")
                 Nodotemp.imprimir_siguiente()
                 Nodotemp = Nodotemp.siguiente
 
             if Nodotemp.siguiente == "NULL":
-                print(Nodotemp.siguiente)
+                print("\033[44m"+"\033[32m"+ "---->" + Nodotemp.siguiente+"\033[0m")
         else:
             print(self.cabeza.valor, end=" ")
-            print(" POSICION [", end=" ")
+            print("\033[45m"+" POSICION [", end=" ")
             print(self.cabeza.pos, end=" ")
-            print(" ] ")
+            print(" ] "+ "\033[0m")
 
-            print("NULL [final]")
-
+            print("\033[45m"+ "NULL [final]"+ "\033[0m")
+        time.sleep(1)
     def agregar_Nodo_Inicio(self, Nodo):
         cabeza_temp = self.cabeza
         Nodo.asignar_siguiente(self.cabeza)
@@ -161,7 +157,7 @@ class ListaEnlazada:
                     self.agregar_Nodo_Final(nodo)
                 elif Nodotemp.siguiente == "NULL" and Nodotemp.pos < posi - 1:
                     print(
-                        "###################INGRESE UNA POSICIÓN VÁLIDA##########################################"
+                        "################### INGRESE UNA POSICIÓN VÁLIDA ##########################################"
                     )
                     esperar(4)
 
@@ -196,7 +192,7 @@ class ListaEnlazada:
                 time.sleep(5)
 
         else:
-            print("Hay un único elemento en la lista")
+            print(" Hay un único elemento en la lista ")
             time.sleep(5)
 
     def eliminar_ultimo(self):
@@ -259,7 +255,7 @@ class ListaEnlazada:
             elif self.cabeza.pos == posi and self.cabeza.siguiente != "NULL":
                 Siguiente = self.cabeza.siguiente
                 self.cabeza = Siguiente
-                print("aca estoy")
+                #print(" aca estoy BAUTISTA ME VA A MATAR")
             else:
                 print("ERROR FATAL!")
         self.indexar()
@@ -295,7 +291,7 @@ class ListaEnlazada:
         else:
             if self.cabeza.valor == num:
                 contador = contador + 1
-        print("El numero " + str(num) + "apareció " + str(contador) + " VECES ")
+        print("El numero " + str(num) + " apareció " + str(contador) + " VECES ")
         time.sleep(2)
         # print(self.cabeza.valor)
 
@@ -351,7 +347,7 @@ Lista = ListaEnlazada(Nodo1)
 # Nodo1.imprimir_siguiente()
 # Nodo2.imprimir_siguiente()
 Lista.ciclo_sigue()
-
+"""
 Nodo2 = Nodo(56)
 Lista.agregar_Nodo_Final(Nodo2)
 Lista.ciclo_sigue()
@@ -369,7 +365,7 @@ Lista.ciclo_sigue()
 # print(Nodo4.imprimir_siguiente())
 # print("##############")
 # PONER NODOS VOLANDO, AGREGAR AL INICIO
-
+"""
 # AGREGAR AL INICIO
 
 
