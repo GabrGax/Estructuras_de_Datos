@@ -277,19 +277,19 @@ class ListaEnlazada:
             # print(Nodotemp.valor)
             # Nodotemp.pos = 1
             if Nodotemp.valor == num:
-                print("POS ENCO " + Nodotemp.pos)
+                #print("POS ENCO " + Nodotemp.pos)
                 contador = contador + 1
             while Nodotemp.siguiente != "NULL":
-                print("*/iTer**")
+                #print("*/iTer**")
 
                 # Nodotemp.imprimir_siguiente()
                 Nodotemp = Nodotemp.siguiente
-                print("COMPARA " + str(Nodotemp.pos))
+                #print("COMPARA " + str(Nodotemp.pos))
                 if int(Nodotemp.valor) ==int(num):
-                    print("POS ENCO " + str(Nodotemp.pos))
+                    #print("POS ENCO " + str(Nodotemp.pos))
                     contador = contador + 1
-                else:
-                    print(str(Nodotemp.valor) + " ES DISTINTO DE " + str(num))
+                #else:
+                    #print(str(Nodotemp.valor) + " ES DISTINTO DE " + str(num))
                     
 
         else:
@@ -298,6 +298,41 @@ class ListaEnlazada:
         print("El numero " + str(num) + "apareció " + str(contador) + " VECES ")
         time.sleep(2)
         # print(self.cabeza.valor)
+
+    def posicion(self, num):
+        # print("------------IMPRESION DE VALORES----------------");
+        self.indexar()
+        
+        if self.cabeza.siguiente != "NULL":
+            # print(self.cabeza.valor)
+            if self.cabeza.valor == num:
+                print("NUMERO" + str(num) + "SE ENCUENTRA EN LA POSICION " + str(self.cabeza.pos))
+
+            Nodotemp = self.cabeza.siguiente
+            # print(Nodotemp.valor)
+            # Nodotemp.pos = 1
+            if Nodotemp.valor == num:
+                #print("POS ENCO " + Nodotemp.pos)
+                print("NUMERO" + str(num) + "SE ENCUENTRA EN LA POSICION " + str(Nodotemp.pos))
+            while Nodotemp.siguiente != "NULL":
+                #print("*/iTer**")
+
+                # Nodotemp.imprimir_siguiente()
+                Nodotemp = Nodotemp.siguiente
+                #print("COMPARA " + str(Nodotemp.pos))
+                if int(Nodotemp.valor) ==int(num):
+                    #print("POS ENCO " + str(Nodotemp.pos))
+                    print("NUMERO" + str(num) + "SE ENCUENTRA EN LA POSICION " + str(Nodotemp.pos))
+                    
+
+        else:
+            if self.cabeza.valor == num:
+                print("NUMERO" + str(num) + "SE ENCUENTRA EN LA POSICION " + str(self.cabeza.pos))
+        
+        time.sleep(2)
+        # print(self.cabeza.valor)
+
+
 
 
 ####APARTADO DE PRUEBA DEL CODIGO---------------------------------------
@@ -418,11 +453,14 @@ while True:
         Lista.contarnum(pose)
         pass
     elif choice == "7":
-        # Code for option 7
+        pose = int(input("Ingresa EL NUMERO  "))
+        Lista.posicion(pose)
+
+
         pass
     elif choice == "8":
         Lista.ciclo_sigue()
-        # Code for option 8
+        
         pass
     elif choice == "9":
         break
